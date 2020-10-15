@@ -1,0 +1,16 @@
+[Unit]
+Description=Geth
+After=network.target
+
+[Service]
+User=dinshaw
+Group=dinshaw
+EnvironmentFile=/opt/eth/geth
+ExecStart=/opt/eth/bin/geth $GETH_OPTS
+ExecReload=/bin/kill -SIGINT $MAINPID
+KillMode=process
+Restart=on-failure
+Type=simple
+
+[Install]
+WantedBy=multi-user.target
