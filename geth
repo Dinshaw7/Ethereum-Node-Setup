@@ -1,0 +1,1 @@
+GETH_OPTS="--datadir=/opt/eth/data --rpc --rpcaddr 0.0.0.0 --rpcport 48304 --rpccorsdomain \"*\" --rpcapi \"db,eth,net,web3,personal\" --nousb --allow-insecure-unlock"
